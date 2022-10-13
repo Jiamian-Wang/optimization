@@ -21,20 +21,20 @@ if strcmp(func_choose,'quad_100')
     result_2 = quadratic_100(x_vec_2);
     [x_vec_3, x_record_3, func_record_3] = Q_Newton_Opt_linesearch(x, @quadratic_100, @grad_quadratic_100, 500, c, r, alpha);
     result_3 = quadratic_100(x_vec_3);
-    % 
-    % figure;
-    % plot([1:200], func_record_1(1:200), 'LineWidth', 2, 'DisplayName','Gradient Descent');
-    % legend('FontSize', 16);
-    % hold on;
-    % plot([1:2], func_record_2(1:2), 'LineWidth', 8, 'DisplayName','Newton w/ line search');
-    % legend('FontSize', 16);
-    % hold on;
-    % plot([1:200], func_record_3(1:200), 'LineWidth', 2, 'DisplayName','Q-Newton w/ line search');
-    % legend('FontSize', 16);
-    % hold on;
-    % title('Quadratic (dim=100)', 'FontSize', 16);
-    % xlabel('#iteration (k)', 'FontSize', 16);
-    % ylabel('f(x_k)', 'FontSize', 16);
+    
+    figure;
+    plot([1:200], func_record_1(1:200), 'LineWidth', 2, 'DisplayName','Gradient Descent');
+    legend('FontSize', 16);
+    hold on;
+    plot([1:2], func_record_2(1:2), 'LineWidth', 8, 'DisplayName','Newton w/ line search');
+    legend('FontSize', 16);
+    hold on;
+    plot([1:200], func_record_3(1:200), 'LineWidth', 2, 'DisplayName','Q-Newton w/ line search');
+    legend('FontSize', 16);
+    hold on;
+    title('Quadratic (dim=100)', 'FontSize', 16);
+    xlabel('#iteration (k)', 'FontSize', 16);
+    ylabel('f(x_k)', 'FontSize', 16);
 
 
 
